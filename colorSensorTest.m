@@ -19,4 +19,4 @@ switch(color)
         colorName = 'brown';
 end
 
-disp(colorName);
+disp(color);
