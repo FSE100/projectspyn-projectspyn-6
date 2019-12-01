@@ -8,6 +8,7 @@ while(distance ~= -1 && pressed ~= -1 && color ~= -1)
     pressed3 = brick.TouchPressed(3);
     pressed4 = brick.TouchPressed(4);
     color = brick.ColorCode(2);
+    disp(color);
     
      %%ultrasonic sensor statements
     if(distance >= 10 && distance <= 65)
@@ -61,7 +62,7 @@ while(distance ~= -1 && pressed ~= -1 && color ~= -1)
             brick.MoveMotor('B', 30);
             pause(3)
         end
-        if(color == 3 || color == 4)%%yellow/green,manual
+        if(color == 3 || color == 2)%%yellow/green,manual
             brick.StopMotor('A', 16);
             brick.StopMotor('B', 16);
             ManualControls();
