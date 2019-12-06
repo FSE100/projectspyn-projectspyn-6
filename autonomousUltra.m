@@ -49,7 +49,7 @@ while(distance ~= -1 && pressed ~= -1 && color ~= -1)
     end
     
     %%color sensor statements
-        if(color ~= 5 && color ~= 3 && color == 4) 
+        if(color ~= 5 && color ~= 3 && color ~= 4) 
             brick.MoveMotor('A', 30);
             brick.MoveMotor('B', 30);
         end
@@ -62,7 +62,7 @@ while(distance ~= -1 && pressed ~= -1 && color ~= -1)
             brick.MoveMotor('B', 30);
             pause(3)
         end
-        if(color == 3 || color == 2)%%yellow/green,manual
+        if(color == 3 || color == 4)%%yellow/green,manual
             brick.StopMotor('A', 16);
             brick.StopMotor('B', 16);
             ManualControls();
